@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
-    "build-only": "vite build",
+    "build-only": "SET NODE_OPTIONS=--openssl-legacy-provider && vite build",
     "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
